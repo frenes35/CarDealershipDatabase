@@ -1,4 +1,4 @@
-drop database cardealership ;
+drop database cardealership;
 
 create database cardealership;
 
@@ -10,7 +10,8 @@ CREATE TABLE dealerships (
 dealership_id int auto_increment PRIMARY KEY, 
 name varchar (50) NOT NULL,
 address varchar (50),
-phone varchar (12)
+phone varchar (12),
+sold boolean default false 
 );
 
 CREATE TABLE vehicles (
