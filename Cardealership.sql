@@ -34,6 +34,16 @@ year int NOT NULL,
  foreign key(vin) references vehicles(vin)
  );
  
+ CREATE TABLE sales_contracts (
+    Contract_ID INT AUTO_INCREMENT PRIMARY KEY,
+    Date DATE NOT NULL,
+    CustomerName VARCHAR(100) NOT NULL,
+    CustomerEmail VARCHAR(100),
+    VehicleSold VARCHAR(17),
+    MonthlyPayment DECIMAL(10, 2),
+    FOREIGN KEY (VehicleSold) REFERENCES vehicles(Vin)
+);
+ 
  
  
  
